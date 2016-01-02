@@ -1,0 +1,31 @@
+#aspectInput {
+  width: 60%;
+}
+#aspectInput > tbody > tr > td:nth-child(1) {
+  width: 70%;
+}
+td > input {
+  width: 100%;
+  font-size: 150%;
+}
+#results {
+  width: 60%;
+  border-collapse: collapse;
+}
+#results > tbody > tr > td {
+  border: 1px solid black;
+  font-size: 200%;
+}
+#results > tbody > tr > td:nth-child(1) {
+  border-right: none;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+}
+#results > tbody > tr > td:nth-child(1) > img {
+  vertical-align: middle;
+}
+#results > tbody > tr > td:nth-child(2) {
+  border-left: none;
+}
+
