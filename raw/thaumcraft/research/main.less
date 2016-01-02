@@ -1,0 +1,17 @@
+.aspect-name{padding-right: 10px;}
+.aspect-description{color: gray;}
+
+.chain{margin-bottom: 1em;}
+.chain-element{
+	display: inline-block;
+	& > .w3-text{
+		margin-left: 10px;
+		position: absolute;
+		z-index: 10;
+		background-color: black;
+		border: 1px solid white;
+		white-space: nowrap;
+	}
+	&:not(:last-child){margin-right: 10px;}
+}
+.remove{float: right;}

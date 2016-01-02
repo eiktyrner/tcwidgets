@@ -1,0 +1,17 @@
+#result > img{vertical-align: middle;}
+#result.error{color: red;}
+#results{
+	& > tbody > tr > td{
+		&:nth-child(1){
+			width: 45px;
+			height: 45px;
+			text-align: center;
+			& > img{vertical-align: middle;}
+		}
+		&:nth-child(2) > span{
+			margin-left: 10px;
+			font-size: 75%;
+			color: gray;
+		}
+	}
+}
