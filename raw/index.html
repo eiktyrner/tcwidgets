@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<template>main</template>
+		<attr key="title" value="Thaumcraft 4 Widgets"/>
+		<style type="text/css">
+			body.dark{background-image: url("bkgdark.png"); color: white;}
+			body.light{background-image: url("bkglight.png"); color: black;}
+		</style>
+		<script type="text/javascript" src="jquery.js"/>
+	</head>
+	<body>
+		<p>These are just a collection of widgets I made for helping players with Thaumcraft 4.</p>
+		<ul id="widget-list"/>
+	</body>
+</html>
+<script class="seteRun">
+	var files = page.getOutputFile().getParentFile().listFiles();
+	var widgets = document.getElementById('widget-list');
+	for(var i=0; i<files.length; i++){
+		if(!files[i].isDirectory() || files[i].getName().startsWith('.')) continue;
+		var indexPath = site.rootRelativePath(files[i]) + '/index.html'
+		var li = document.createElement('li');
+		var a = document.createElement('a').addClass('w3-text-cyan');
+		a.text(site.getPage(indexPath).getAttribute('title'));
+		a.attr('href', indexPath.slice(1, -('index.html'.length)));//Leading slash and trailing filename
+		widgets.appendChild(li.appendChild(a));
+	}
+</script>
