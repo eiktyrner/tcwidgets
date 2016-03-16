@@ -1,30 +1,30 @@
 <html>
   <head> 
     <meta charset="UTF-8"> 
-    <title class="">Thaumcraft 4 Widgets</title> 
+    <title class="">Thaumcraft 4 &amp; 5 Widgets</title> 
     <link rel="stylesheet" type="text/css" href="http://www.w3schools.com/lib/w3.css"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
     <style type="text/css">
-			#invert-button{
+			#controls{
 				position: absolute;
 				right: 0;
 				top: 0;
-				cursor: pointer;
-				font-size: 64px;
+				padding-left: 10px;
 				border-bottom-left-radius: 25%;
 			}
-			body.dark > #invert-button{
-				background-color: rgb(40, 40, 40);
+			#controls > *{
+				cursor: pointer;
+				vertical-align: middle;
 			}
-			body.light > #invert-button{
-				background-color: rgb(215, 215, 215);
-			}
+			#invert-button{font-size: 64px;}
+			#version-select{font-size: 50px;}
+			body.dark > #controls{background-color: rgb(40, 40, 40);}
+			body.light > #controls{background-color: rgb(200, 200, 200);}
 		</style> 
-    <script type="text/javascript" src="https://raw.githubusercontent.com/endreman0/aspects.js/master/aspects.js"></script> 
   </head> 
   <body class="w3-container dark"> 
-    <h1 class="w3-text-cyan">Thaumcraft 4 Widgets</h1> 
-    <i id="invert-button" class="material-icons">invert_colors</i> 
+    <h1 class="w3-text-cyan">Thaumcraft 4 &amp; 5 Widgets</h1> 
+    <span id="controls"> <i id="invert-button" class="material-icons">invert_colors</i> </span> 
     <template>
       main
     </template>
@@ -33,7 +33,7 @@
 			body.light{background-image: url("bkglight.png"); color: black;}
 		</style>
     <script type="text/javascript" src="jquery.js"></script>
-    <p>These are just a collection of widgets I made for helping players with Thaumcraft 4.</p>
+    <p>These are just a collection of widgets I made for helping players with Thaumcraft 4 and 5.</p>
     <ul id="widget-list">
       <li><a class="w3-text-cyan" href="energize/">Energized Node Aspect Calculator</a></li>
       <li><a class="w3-text-cyan" href="primals/">Primal Aspect Calculator</a></li>
@@ -41,11 +41,11 @@
       <li><a class="w3-text-cyan" href="tree/">Aspect Tree</a></li>
     </ul>    
     <script>
-	$("#invert-button").on("click", function(){
-		var dark = ($("body.dark").length == 1);
-		$("body").toggleClass("dark", !dark).toggleClass("light", dark);
+	$('#invert-button').on('click', function(){
+		var dark = ($('body.dark').length == 1);
+		$('body').toggleClass('dark', !dark).toggleClass('light', dark);
 	});
 </script> 
   </body>
 </html>
-<attr key="title" value="Thaumcraft 4 Widgets" />
+<attr key="title" value="Thaumcraft 4 &amp; 5 Widgets" />
