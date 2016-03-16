@@ -2,13 +2,30 @@
 	<head>
 		<template>main</template>
 		<!--Widget-only links (like linking back a directory for backgrounds and jQuery)-->
-		<style type="text/css">
-			body.dark{background-image: url("../bkgdark.png"); color: white;}
-			body.light{background-image: url("../bkglight.png"); color: black;}
+		<style type='text/css'>
+			body.dark{background-image: url('../bkgdark.png'); color: white;}
+			body.light{background-image: url('../bkglight.png'); color: black;}
 		</style>
-		<script type="text/javascript" src="../jquery.js"/>
+		<script type='text/javascript' src='../jquery.js'/>
+		<script type='text/javascript' src='https://raw.githubusercontent.com/endreman0/aspects.js/master/aspects-core.js'/>
+		<script type='text/javascript' src='https://raw.githubusercontent.com/endreman0/aspects.js/master/aspects-tc4.js'/>
+		<script type='text/javascript' src='https://raw.githubusercontent.com/endreman0/aspects.js/master/aspects-tc5.js'/>
 	</head>
 	<body>
 		<content/>
 	</body>
 </html>
+<script class='seteRun'>
+document.getElementById('invert-button').before(document.createElement('span').attr('id', 'version-select').text('4'));
+</script>
+<script>
+aspects.select('TC4');//Thaumcraft 4 by default
+var vselect = $('#version-select');
+vselect.on('click', function(){
+	if(vselect.text() == '4') vselect.text('5');
+	else vselect.text('4');
+	aspects.select('TC' + vselect.text());
+	updateVersion();
+	return false;//Prevent text highlighting
+});
+</script>

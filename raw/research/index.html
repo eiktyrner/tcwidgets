@@ -1,42 +1,42 @@
 <html>
 	<head>
 		<template>widget</template>
-		<attr key="title" value="Thaumcraft 4 Research Helper"/>
-		<link rel="stylesheet" type="text/css" href="main.css"/>
+		<attr key='title' value='Thaumcraft 4 Research Helper'/>
+		<link rel='stylesheet' type='text/css' href='main.css'/>
 		
-		<script type="text/javascript" src="lib.js"/>
-		<script type="text/javascript" src="main.js"/>
+		<script type='text/javascript' src='lib.js'/>
+		<script type='text/javascript' src='main.js'/>
 	</head>
 	<body>
-		<div class="w3-row">
-			<div class="w3-container w3-col s12 m6 l3"><!--Input wrapper-->
+		<div class='w3-row'>
+			<div class='w3-container w3-col s12 m6 l3'><!--Input wrapper-->
 				<h2>Aspect Selection</h2>
 				<form>
 					<label>Starting Aspect</label>
-					<input id="aspect1" type="text" class="w3-input w3-dark-grey"/>
-					<label id="error1" class="w3-text-red"/><br/>
+					<input id='aspect1' type='text' class='w3-input w3-dark-grey'/>
+					<label id='error1' class='w3-text-red'/><br/>
 					
 					<label>Ending Aspect</label>
-					<input id="aspect2" type="text" class="w3-input w3-dark-grey"/>
-					<label id="error2" class="w3-text-red"/>
+					<input id='aspect2' type='text' class='w3-input w3-dark-grey'/>
+					<label id='error2' class='w3-text-red'/>
 				</form>
-				<button id="connect" class="w3-btn w3-cyan">Connect</button>
+				<button id='connect' class='w3-btn w3-cyan'>Connect</button>
 			</div>
-			<div class="w3-container w3-col s12 m6 l3"><!--Select/deselect aspects-->
+			<div class='w3-container w3-col s12 m6 l3'><!--Select/deselect aspects-->
 				<h2>Configuration</h2>
-				<input id="config-input" type="text" class="w3-input w3-dark-grey"/>
-				<div class="w3-btn-group">
-					<button id="config-enable" class="w3-btn w3-cyan w3-disabled">Enable</button>
-					<button id="config-disable" class="w3-btn w3-grey w3-disabled">Disable</button>
+				<input id='config-input' type='text' class='w3-input w3-dark-grey'/>
+				<div class='w3-btn-group'>
+					<button id='config-enable' class='w3-btn w3-cyan w3-disabled'>Enable</button>
+					<button id='config-disable' class='w3-btn w3-grey w3-disabled'>Disable</button>
 				</div>
 				<h3>Disabled Aspects</h3>
-				<ul id="disabled-list" class="w3-ul"/>
+				<ul id='disabled-list' class='w3-ul'/>
 			</div>
-			<div class="w3-container w3-col s12 m12 l6"><!--Results wrapper-->
-				<div id="results-header">
-					<h2 style="display:inline;">Results</h2>
+			<div class='w3-container w3-col s12 m12 l6'><!--Results wrapper-->
+				<div id='results-header'>
+					<h2 style='display:inline;'>Results</h2>
 				</div>
-				<div id="results"/>
+				<div id='results'/>
 			</div>
 		</div>
 	</body>
